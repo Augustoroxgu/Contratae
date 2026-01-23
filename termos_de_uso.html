@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TXSJH3E56G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TXSJH3E56G');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços 4.0 - Termos de Uso</title>
+    
+    <link rel="stylesheet" href="style.css/style_laranja_preto.css">
+    <link rel="stylesheet" href="style.css/termos_de_uso.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* --- REMOÇÃO DA BARRA DO GOOGLE --- */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+
+        /* --- 1. HEADER & ESTRUTURA --- */
+        header {
+            background-color: #222;
+            border-bottom: 1px solid #444;
+            position: relative; z-index: 1000; 
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .header-container { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 10px 20px; max-width: 1200px; margin: 0 auto; min-height: 70px; 
+        }
+        
+        .header-left-group { display: flex; align-items: center; gap: 20px; flex-grow: 1; }
+         .site-logo img { 
+        height: 85px; /* Aumentei de 45px para 80px */
+        display: block; 
+        margin-right: 15px; 
+        transition: transform 0.3s; /* Efeito bonitinho ao passar o mouse */
+        }
+        .site-logo img:hover {
+        transform: scale(1.1); /* O logo cresce um pouquinho quando passa o mouse */
+        }
+        .header-right-group { display: flex; align-items: center; gap: 15px; flex-shrink: 0; }
+
+        /* Menu Desktop */
+        .nav-menu { display: flex; align-items: center; }
+        .nav-menu ul { display: flex; list-style: none; gap: 15px; margin: 0; padding: 0; }
+        .nav-menu a { color: #f8f9fa; text-decoration: none; font-weight: 500; font-size: 15px; white-space: nowrap; transition: color 0.3s; }
+        .nav-menu a:hover { color: #ffa500; }
+        
+        /* Botão Login Desktop */
+        .desktop-login-btn { background-color: #ffa500; color: #222; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; white-space: nowrap; font-size: 14px; transition: background 0.3s; display: inline-block; }
+        .desktop-login-btn:hover { background-color: #e69500; }
+        .mobile-login-link { display: none; }
+
+        /* Tradutor */
+        #google_translate_element { position: static; margin-left: 5px; }
+        .goog-te-gadget-simple { background-color: transparent !important; border: 1px solid rgba(255,255,255,0.3) !important; padding: 5px !important; border-radius: 4px !important; font-size: 13px !important; }
+        .goog-te-gadget-simple span { color: #fff !important; vertical-align: middle; } 
+        .goog-te-gadget-simple img { display: none !important; }
+        .goog-te-menu-value span:last-child { display: none; }
+
+        /* Hambúrguer */
+        .hamburger { display: none; flex-direction: column; width: 30px; cursor: pointer; gap: 6px; z-index: 2000; }
+        .hamburger span { display: block; height: 3px; background: #ffa500; border-radius: 3px; transition: 0.3s; }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 1100px) {
+            .hamburger { display: flex; }
+            .desktop-login-btn { display: none; }
+            .nav-menu { display: none; }
+            .header-container { justify-content: space-between; }
+            
+            #google_translate_element { position: absolute; top: 18px; right: 60px; z-index: 1001; }
+
+            .nav-menu.mobile-active {
+                display: flex; position: absolute; top: 100%; left: 0; width: 100%; 
+                background: #333; flex-direction: column; align-items: center; 
+                border-bottom: 1px solid #444; padding-bottom: 20px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            }
+            .nav-menu ul { flex-direction: column; width: 100%; text-align: center; padding: 20px 0; gap: 0; }
+            .nav-menu ul li { width: 100%; border-bottom: 1px solid #444; }
+            .nav-menu ul li a { display: block; padding: 15px; font-size: 18px; }
+            
+            .mobile-login-link { display: block; margin-top: 10px; width: 80%; margin-left: auto; margin-right: auto; }
+            .mobile-login-link a { color: #ffa500 !important; border: 1px solid #ffa500; padding: 10px; border-radius: 5px; display: block; text-align: center; width: 100%; box-sizing: border-box; }
+            
+            .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+        }
+
+        /* --- TEMA (Modo Claro) --- */
+        .theme-toggle-btn { position: fixed; bottom: 100px; left: 20px; background-color: #ffa500; color: #222; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 1.5em; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1001; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
+        .theme-toggle-btn:hover { transform: scale(1.1); }
+
+        /* Light Mode Styles */
+        body.light-mode { background-color: #f0f0f0 !important; color: #333 !important; }
+        body.light-mode header { background-color: #fff !important; border-bottom: 1px solid #ddd !important; }
+        body.light-mode .nav-menu { background-color: transparent !important; }
+        body.light-mode .nav-menu.mobile-active { background-color: #fff !important; }
+        body.light-mode .nav-menu a { color: #444 !important; } 
+        body.light-mode .nav-menu a:hover { color: #ffa500 !important; }
+        body.light-mode .hamburger span { background-color: #333 !important; }
+        @media (max-width: 1100px) { body.light-mode .nav-menu ul li { border-bottom: 1px solid #eee !important; } }
+
+        body.light-mode .goog-te-gadget-simple { border: 1px solid #ccc !important; }
+        body.light-mode .goog-te-gadget-simple span { color: #333 !important; }
+
+        /* Conteúdo Termos no Modo Claro */
+        body.light-mode main { background-color: transparent !important; }
+        
+        /* A classe .terms-section vem do arquivo CSS original, vamos sobrescrever para o modo claro */
+        body.light-mode .terms-section {
+            background-color: #fff !important;
+            color: #333 !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+            border: 1px solid #eee !important;
+        }
+        body.light-mode .terms-section h1 { color: #d48800 !important; } /* Laranja escuro */
+        body.light-mode .terms-section h2 { color: #222 !important; }
+        body.light-mode .terms-section p, 
+        body.light-mode .terms-section li { color: #555 !important; }
+        
+        body.light-mode footer { background-color: #e0e0e0 !important; color: #333 !important; }
+        body.light-mode footer a { color: #444 !important; }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+            pageLanguage: 'pt',
+            includedLanguages: 'pt,en,es',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+          }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <header>
+        <div class="header-container">
+            <div class="header-left-group">
+                <a href="index.html" class="site-logo">
+                    <img src="imagens/logo4.0.png" alt="Logo Serviços 4.0">
+                </a>
+                <nav class="nav-menu" id="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Página Inicial</a></li>
+                        <li><a href="pintores.html">Pintores</a></li>
+                        <li><a href="pedreiros.html">Pedreiros</a></li>
+                        <li><a href="eletricistas.html">Eletricistas</a></li>
+                        <li><a href="encanadores.html">Encanadores</a></li>
+                        <li><a href="servicos_categorias.html">Outros Serviços</a></li>
+                        <li><a href="sobre_nos.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li class="mobile-login-link">
+                            <a href="login.html">ENTRAR / CADASTRE-SE</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right-group">
+                <a href="login.html" class="desktop-login-btn">ENTRAR / CADASTRE-SE</a>
+                <div id="google_translate_element"></div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="terms-section">
+                <h1>Termos de Uso dos Serviços 4.0</h1>
+                <p>Última atualização: 17 de junho de 2025</p>
+
+                <p>Bem-vindo aos Serviços 4.0! Ao acessar ou utilizar nossa plataforma, você concorda em cumprir e estar vinculado aos seguintes termos e condições de uso. Por favor, leia-os atentamente. Se você não concordar com estes termos, não poderá utilizar nossos serviços.</p>
+
+                <h2>1. Aceitação dos Termos</h2>
+                <p>Ao se registrar, acessar ou utilizar qualquer parte dos Serviços 4.0, você aceita e concorda em estar vinculado a estes Termos de Uso e à nossa Política de Privacidade. Estes termos se aplicam a todos os visitantes, usuários e outros que acessam ou utilizam o Serviço.</p>
+
+                <h2>2. Descrição do Serviço</h2>
+                <p>Os Serviços 4.0 são uma plataforma online que conecta usuários ("Clientes") que necessitam de serviços com profissionais autônomos ou empresas ("Prestadores de Serviços") que oferecem tais serviços. Nossa plataforma facilita a busca, o agendamento e a comunicação entre Clientes e Prestadores de Serviços, mas não somos uma parte direta em qualquer acordo ou prestação de serviços entre eles.</p>
+
+                <h2>3. Registro e Conta do Usuário</h2>
+                <ul>
+                    <li>Para acessar certas funcionalidades do Serviço, você pode ser obrigado a se registrar e criar uma conta.</li>
+                    <li>Você concorda em fornecer informações precisas, completas e atualizadas durante o processo de registro e manter essas informações atualizadas.</li>
+                    <li>Você é responsável por manter a confidencialidade de sua senha e por todas as atividades que ocorram em sua conta.</li>
+                    <li>Os Serviços 4.0 não se responsabilizam por perdas ou danos decorrentes do não cumprimento desta obrigação por parte do usuário.</li>
+                </ul>
+
+                <h2>4. Conduta do Usuário</h2>
+                <p>Você concorda em não:</p>
+                <ul>
+                    <li>Utilizar o Serviço para qualquer finalidade ilegal ou não autorizada.</li>
+                    <li>Assediar, abusar, insultar, ferir, difamar, caluniar, denegrir, intimidar ou discriminar com base em gênero, orientação sexual, religião, etnia, raça, idade, nacionalidade ou deficiência.</li>
+                    <li>Enviar informações falsas ou enganosas.</li>
+                    <li>Fazer upload ou transmitir vírus ou qualquer outro tipo de código malicioso que possa ser usado para afetar a funcionalidade ou operação do Serviço ou de qualquer site relacionado.</li>
+                </ul>
+
+                <h2>5. Conteúdo do Usuário</h2>
+                <p>Qualquer conteúdo que você enviar para a plataforma, incluindo avaliações, comentários ou descrições de serviços, deve ser verdadeiro e não violar os direitos de terceiros ou as leis aplicáveis. Os Serviços 4.0 reservam-se o direito de remover qualquer conteúdo que consideremos inadequado ou que viole estes termos.</p>
+
+                <h2>6. Isenção de Garantias</h2>
+                <p>Os Serviços 4.0 são fornecidos "como estão" e "conforme disponíveis", sem garantias de qualquer tipo, expressas ou implícitas. Não garantimos que o Serviço será ininterrupto, seguro ou livre de erros.</p>
+
+                <h2>7. Limitação de Responsabilidade</h2>
+                <p>Em nenhuma circunstância os Serviços 4.0, seus diretores, funcionários, parceiros, agentes, fornecedores ou afiliados serão responsáveis por quaisquer danos diretos, indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo, sem limitação, perda de lucros, dados, uso, boa vontade ou outras perdas intangíveis, resultantes de (i) seu acesso ou uso ou incapacidade de acessar ou usar o Serviço; (ii) qualquer conduta ou conteúdo de terceiros no Serviço; (iii) qualquer conteúdo obtido do Serviço; e (iv) acesso não autorizado, uso ou alteração de suas transmissões ou conteúdo, seja com base em garantia, contrato, delito (incluindo negligência) ou qualquer outra teoria legal, quer tenhamos sido informados ou não da possibilidade de tal dano.</p>
+
+                <h2>8. Links para Outros Sites</h2>
+                <p>Nosso Serviço pode conter links para sites ou serviços de terceiros que não são de propriedade ou controlados pelos Serviços 4.0. Não temos controle e não assumimos responsabilidade pelo conteúdo, políticas de privacidade ou práticas de quaisquer sites ou serviços de terceiros.</p>
+
+                <h2>9. Alterações nos Termos</h2>
+                <p>Reservamos o direito, a nosso exclusivo critério, de modificar ou substituir estes Termos a qualquer momento. Se uma revisão for material, tentaremos fornecer um aviso com pelo menos 30 dias de antecedência antes que quaisquer novos termos entrem em vigor. O que constitui uma alteração material será determinado a nosso exclusivo critério.</p>
+
+                <h2>10. Contato</h2>
+                <p>Se você tiver alguma dúvida sobre estes Termos de Uso, por favor, entre em contato conosco através dos canais disponíveis no nosso site.</p>
+            </section>
+        </div>
+    </main>
+
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar Tema">
+        <i class="fas fa-adjust"></i>
+    </button>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Serviços 4.0</p>
+            <div class="footer-links">
+                <a href="feedback.html">Deixe sua Avaliação</a> |
+                <a href="sobre_nos.html">Sobre Nós</a> |
+                <a href="termos_de_uso.html">Termos de Uso</a>
+            </div>
+            <div style="text-align: center; padding: 20px;" id="whatsapp">
+                <a href="https://wa.me/16994555864" target="_blank" class="whatsapp-button">
+                    <i class="fab fa-whatsapp" style="margin-right: 5px;"></i> Fale Conosco no WhatsApp
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Menu
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('mobile-active');
+                });
+            }
+            // 2. Link Ativo
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-menu ul li a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) link.classList.add('active');
+            });
+            // 3. Tema
+            const themeBtn = document.getElementById('theme-toggle');
+            const body = document.body;
+            const icon = themeBtn.querySelector('i');
+
+            function updateThemeIcon() {
+                if (body.classList.contains('light-mode')) {
+                    icon.classList.remove('fa-adjust'); icon.classList.add('fa-moon');
+                } else {
+                    icon.classList.remove('fa-moon'); icon.classList.add('fa-adjust');
+                }
+            }
+
+            if (localStorage.getItem('theme') === 'light') {
+                body.classList.add('light-mode');
+                updateThemeIcon();
+            }
+
+            if (themeBtn) {
+                themeBtn.addEventListener('click', () => {
+                    body.classList.toggle('light-mode');
+                    updateThemeIcon();
+                    localStorage.setItem('theme', body.classList.contains('light-mode') ? 'light' : 'dark');
+                });
+            }
+        });
+    </script>
+
+    <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+</body>
+</html>
